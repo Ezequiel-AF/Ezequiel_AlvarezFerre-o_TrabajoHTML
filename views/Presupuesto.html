@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AF style</title>
+    <link rel="stylesheet" href="../estilos/style.css">
+</head>
+<body>
+    <header class="header-xs">
+        <nav class="nav-links">
+            <img src="../assets/imagenes/logo3.jpeg" alt="logo de la empresa" width="50" height="50" id="logo-empresa">
+            <a href="../index.html">Inicio</a>
+            <a href="./productos.html">Productos</a>
+            <a href="./Presupuesto.html">Presupuesto</a>
+            <a href="./Contacto.html">Contacto</a>
+        </nav>
+    </header>
+    <main>
+
+        <section>
+            <h1>Pida su presupuesto aquí</h1>
+            <div class="formulario">
+               <form action="envio.php" method="post" enctype="multipart/form-data">            
+                    <div class="formulario-contenido">
+                        <label for="nombre">Nombre y Apellido</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Escriba su Nombre y Apellido" maxlength="50" required autofocus>
+                    </div>
+                
+                    <div class="formulario-contenido">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email" placeholder="Escriba su email" required>
+                    </div>
+
+                    <div class="formulario-contenido">
+                        <label for="movil">Teléfono</label>
+                        <input type="tel" name="movil" id="movil" placeholder="Escriba su movil">
+                    </div>
+
+                    <div class="formulario-contenido">
+                        <div class="areadetexto">
+                            <label for="solicita">Solicita más información</label>
+                        </div>
+                        <textarea name="solicita" id="solicita" cols="40" rows="6"></textarea>
+                    </div>
+
+                    <div class="formulario-contenido">
+                        <label for="privacidad">El usuario acepta la política de privacidad de la empresa</label>
+                        <input type="checkbox" name="privacidad" id="privacidad" required>
+                    </div>
+
+                    <div class="formulario-botones">
+                        <input type="submit" name="enviar" value="Enviar" class="boton">
+                        <input type="reset" name="borrar" value="Reset" class="boton">
+                    </div>
+                </form> 
+            </div>
+        </section>    
+    </main>
+    <footer>
+        <div class="pie">
+            <ul>
+                <li>
+                     <!--Las cuentas de instagram y facebook fueron creadas ficticias, en linkedin nos lleva a la pagina principal porque no tenemos perfil-->
+                    <a href="https://www.facebook.com/people/AF/61571651371725/?mibextid=wwXlfr&rdid=G0P7L1xj16zA3VXA&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1GgYUgViax%2F%3Fmibextid%3DwwXlfr" target="_blank">
+                        <img src="../assets/imagenes/facebook.png" alt="icono de instagram" width="2000" height="2000" class="img-contacto">
+                    </a>
+                    <a href="https://instagram.com/af_developmentt?igsh=MTk0dWNxNW1rOW-NoaQ==" target="_blank">
+                        <img src="../assets/imagenes/instagram.png" alt="icono de instagram" width="200" height="200" class="img-contacto">
+                    </a>
+                    <a href="https://es.linkedin.com/" target="_blank">
+                        <img src="../assets/imagenes/linkedin.png" alt="icono de linkedin" width="506" height="512" class="img-contacto">
+                    </a>
+                </li>
+            </ul>
+            <p>Copyright © 2010-2025 AF Company S.L. Todos los derechos reservados.</p>
+        </div>
+        
+        
+
+    </footer>
+    
+</body>
+</html>

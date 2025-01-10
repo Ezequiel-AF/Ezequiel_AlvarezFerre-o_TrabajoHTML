@@ -1,0 +1,488 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    max-width: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*************INDEX**************/
+
+/************HEADER**************/
+
+header{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+}
+
+.nav-links{
+    list-style: none;
+    width: 100%;
+    position: fixed;
+    top: 0; 
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgb(218, 165, 32);
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+}
+
+.nav-links a:hover{
+    color: rgb(218, 165, 32);
+}
+
+.cabecera{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 100px;
+    color: rgb(218, 165, 32);
+}
+
+.cabecera-img{
+    width: 500px;
+    height: 500px;
+    
+}
+
+.cabecera h1{
+    font-size:xx-large;
+    margin: 10px;
+    font-weight:800;
+}
+
+/************MAIN**************/
+
+main{
+    background-color: antiquewhite;
+}
+
+/************SECCION1**********/
+
+section{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor{
+    width: 80%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.contenedor h2{
+    font-size: xx-large;
+    font-weight:700;
+}
+
+.contenedor-img{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    margin-top: 50px;
+}
+
+.contenedor-img img{
+    width: 100%;
+    height: 100%;
+    max-height: 500px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.contenedor-texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align:start;
+    border-radius: 20px;
+    padding: 25px;
+    margin-left: -20px;
+    max-height: max-content;
+    background-color: rgba(218, 165, 32, 0.356);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+}
+
+.contenedor-texto h3{
+    text-align: center;
+}
+
+.contenedor-texto span{
+    font-size: large;
+    font-style: italic;
+}
+
+/************SECCION2**********/
+
+.servicios{
+    background-color: white;
+    padding: 50px;
+}
+
+.servicios .contenedor h2{
+    color: rgb(218, 165, 32);
+}
+
+.contenedor-img1{
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.contenedor-img1 img{
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    object-fit: cover;
+    z-index: 9;
+}
+
+.contenedor-img1 .contenedor-texto{
+   max-width: 400px;
+   margin-left: 0px;
+   z-index: 8;
+   transform: translateY(-100px);
+   transition: all .5s ease-in-out;
+   text-align: center;
+   align-items: center;
+}
+
+.contenedor-img1 .contenedor-texto:hover{
+    transform: translate(0px);
+    opacity: 1;
+    cursor: pointer;
+}
+
+.contenedor-img1 .contenedor-texto img{
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+}
+
+/**************Section3*****************/
+.texto-grande{
+    font-size: 5em;
+}
+
+/**************Footer********************/
+
+.pie{
+    background-color: rgba(218, 165, 32, 0.356);
+    justify-content: center;
+    text-align: center;
+    font-size: small;
+    padding: 5px;
+}
+
+ul li{
+    display: flex;
+    justify-content:right;
+    padding: 10px;
+}
+
+
+.img-contacto{
+    width: 20px;
+    height: 20px;
+    margin: 3px;
+}
+
+
+/************************Productos**********************/
+
+#logo-empresa{
+   max-height: auto;
+}
+
+.header-xs{
+    text-align: center;
+    max-height: 90px;
+}
+
+.contenedor-productos{
+    display: grid;
+    grid-template-columns: repeat(3, 33%); 
+    grid-template-rows: 100px 1fr;
+    gap: 20px;
+    grid-template-areas: 
+    "titulo titulo titulo"
+    "producto1 producto2 producto3";
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.contenedor-productos h1{
+    grid-area: titulo;
+    padding: 50px;
+    margin-top: -100px;
+    font-weight: 800;
+    font-size: 2em;
+}
+
+.productos1{
+    grid-area: producto1;
+}
+
+.productos2{
+    grid-area: producto2;
+}
+
+.productos3{
+    grid-area: producto3;
+}
+
+
+.img-producto{
+    width: 250px;
+    height: 250px;
+    position: relative;
+    z-index: 5;
+}
+
+.productos-texto{
+    max-width: 250px;
+    max-height: max-content;
+    background-color: rgba(218, 165, 32, 0.356);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+    border-radius: 20px;
+    padding: 5px;
+    position: relative;
+    z-index: 3;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+.productos1 .productos-texto{
+    transform: translateY(-60px);
+}
+
+.productos2 .productos-texto{
+    transform: translateY(-44px);
+}
+
+.productos3 .productos-texto{
+    transform: translateY(-26px);
+}
+
+.productos-texto:hover{
+    transform: translateY(0px);
+}
+
+.productos-titulo{
+    margin: 30px 0;
+}
+
+
+/************************Presupuestos**********************/
+
+section h1{
+    padding: 40px;
+}
+
+.formulario{ 
+    width: 500px;
+    height: 300px;
+    padding: 30px;
+    text-align: left;
+    background-color: rgb(218, 165, 32); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+    border-radius: 20px;
+}
+
+.formulario-contenido{
+    border: 2px solid antiquewhite;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.areadetexto{
+    text-align: center;
+}
+
+#solicita{
+    display: flex;
+    justify-self: center;
+}
+
+#nombre{
+    width:45%;
+}
+
+.formulario-botones{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.boton{
+    cursor: pointer;
+}
+
+
+/************************Contacto**********************/
+#titulo-contacto{
+    text-align: center;
+    padding: 45px;
+}
+
+.contacto{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-self: center;
+    width: 600px;
+    padding: 30px;
+}
+
+.contacto-columnas{
+    border: 4px solid rgb(218, 165, 32);
+    width: 400px;
+    border-radius: 5px;
+}
+
+#mapa{
+    display: flex;
+    justify-self: center;
+    box-shadow: 0 4px 10px rgba(218, 165, 32, 1);
+}
+
+
+/*****************Pantalla celular************/
+
+
+@media screen and (max-width: 768px) {
+   /**********INDEX************/
+    .nav-links {
+        flex-direction: row;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+        margin: 5px 0;
+    }
+
+    .cabecera-img {
+        width: 250px;
+        height: 250px;
+        margin-top: 100px;
+    }
+
+    .cabecera h1 {
+        font-size: 1.5rem;
+    }
+    .cabecera p{
+        font-size: 0.8rem;
+        width: 80%;
+    }
+
+    .texto-grande{
+        font-size: 3em;
+    }
+
+    .contenedor-texto{
+        height: 400px;
+        font-size: 10px;
+    }
+
+    .contenedor-texto span{
+        font-size: 10px;
+        font-weight: 800;
+    }
+
+    /**********PRODUCTOS************/
+    .header-xs{
+        height: 70px;
+    }
+    
+    .contenedor-productos{
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        width: 30%; 
+        padding: 5px;
+    }
+
+    .img-producto{
+        width: 200px;
+        height: 175px;
+    }
+
+    .contenedor-productos h1{
+        margin-top: -10px;
+    }
+
+    .productos1 .productos-texto{
+        transform: translateY(-80px);
+    }
+
+    /**********PRESUPUESTO************/
+
+    section h1{
+        font-size: 1rem;
+        margin-top: -150px;
+    }
+
+    .formulario{
+        width: 360PX;
+        height: 320PX;
+    }
+
+    .formulario-contenido{
+        font-size: 0.8rem;
+    }
+
+    #nombre{
+        width: 179px;
+    }
+
+    /**********CONTACTO************/
+
+    #titulo-contacto{
+        font-size: 1.3rem;
+    }
+
+    .contacto{
+        width: 360px;
+        padding: 0;
+    }
+
+    .contacto-columnas{
+        font-size: 0.8rem;
+        width: 360px;
+        
+    }
+
+    #mapa{
+        width: 310px;
+        height: 360px;
+        margin: 30px;
+    }
+}
